@@ -1,0 +1,54 @@
+
+
+```{r, setup, include= FALSE}
+library(tidyverse)
+library(reshape2)
+```
+
+```{r}
+#| echo: false
+n_friends <- 20
+
+Edward <- rnorm(n_friends, mean=170, sd=10) 
+Hugo <- rnorm(n_friends, mean=175, sd=15)
+Lucy <- rnorm(n_friends, mean=180, sd=20) 
+
+heights <- data.frame(Edward= Edward, Hugo= Hugo, Lucy= Lucy)
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+
+set.seed(000)
+
+heights_long <- melt(heights)
+heights_long
+test <- ggplot(heights_long, aes(x=variable, y=value, color=variable)) +
+  geom_point(position = position_jitter(width = 0.1)) +
+  labs(x="Friend", y="Height (cm)", color="Friend") +
+  theme_minimal()
+
+test
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+
+set.seed(111)
+
+test
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+
+set.seed(222)
+
+test
+```

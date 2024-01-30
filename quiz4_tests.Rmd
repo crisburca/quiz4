@@ -1,0 +1,65 @@
+---
+output:
+  pdf_document: default
+---
+
+
+
+```{r, setup, include= FALSE}
+#library(tidyverse)
+#library(reshape2)
+```
+
+```{r}
+#| echo: false
+n_friends <- 20
+
+Edward <- rnorm(n_friends, mean=170, sd=10) 
+Hugo <- rnorm(n_friends, mean=175, sd=15)
+Lucy <- rnorm(n_friends, mean=180, sd=20) 
+
+heights <- data.frame(Edward= Edward, Hugo= Hugo, Lucy= Lucy)
+```
+
+
+```{r}
+set.seed(000)
+
+n_friends <- 20
+
+Edward <- rnorm(n_friends, mean=170, sd=10) 
+Hugo <- rnorm(n_friends, mean=175, sd=15)
+Lucy <- rnorm(n_friends, mean=180, sd=20) 
+
+heights <- data.frame(Edward= Edward, Hugo= Hugo, Lucy= Lucy)
+
+heights
+```
+
+```{r}
+set.seed(111)
+
+n_friends <- 20
+
+Edward <- rnorm(n_friends, mean=170, sd=10) 
+Hugo <- rnorm(n_friends, mean=175, sd=15)
+Lucy <- rnorm(n_friends, mean=180, sd=20) 
+
+heights <- data.frame(Edward= Edward, Hugo= Hugo, Lucy= Lucy)
+
+heights
+```
+
+```{r}
+set.seed(222)
+
+n_friends <- 20
+
+Edward <- rnorm(n_friends, mean=170, sd=10) 
+Hugo <- rnorm(n_friends, mean=175, sd=15)
+Lucy <- rnorm(n_friends, mean=180, sd=20) 
+
+heights <- data.frame(Edward= Edward, Hugo= Hugo, Lucy= Lucy)
+
+heights
+```
