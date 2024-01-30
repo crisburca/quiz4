@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 
 
 ```{r, setup, include= FALSE}
@@ -5,8 +10,8 @@ library(tidyverse)
 library(reshape2)
 ```
 
-```{r}
-#| echo: false
+```{r, include= FALSE}
+#| include: false
 n_friends <- 20
 
 Edward <- rnorm(n_friends, mean=170, sd=10) 
@@ -24,7 +29,7 @@ heights <- data.frame(Edward= Edward, Hugo= Hugo, Lucy= Lucy)
 set.seed(000)
 
 heights_long <- melt(heights)
-heights_long
+
 test <- ggplot(heights_long, aes(x=variable, y=value, color=variable)) +
   geom_point(position = position_jitter(width = 0.1)) +
   labs(x="Friend", y="Height (cm)", color="Friend") +
